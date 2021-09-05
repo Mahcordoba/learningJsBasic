@@ -49,6 +49,6 @@ console.table(personas)// te imprime en consola un tabla con los datos.
 // reduce es otra funcion de los arrays 
 //El método reduce() nos permite reducir, mediante una función que se aplica a cada uno de los elemento del array, todos los elementos de dicho array, a un valor único.
 
-const libros = (acum, {cantidadLibros}) => acum + cantidadLibros
+const libros = (acum, {cantidadLibros}) => acum +  cantidadLibros
 var totalDeLibros = personas.reduce(libros, 0)
 console.log(totalDeLibros)
