@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asincronismo como funciona el tiempo en js</title>
+</head>
+<body>
+    <p>
+        El asincronismo en js: Tenemos que recordar que js solo puede hacer una tarea a la vez poque solo tiene una pila de ejecucion, cuando quiere delegar una tarea esta pasa por la pila de ejecucion y de aqui es redirigida a donde tenga que ir ya sea por ejemplo un servidor del que necesitamos una respuesta, cuando este llegue quedara en una pila pendientes y solo cuando la pila de ejecucion principal termine de hacer lo que esta haciendo esta ira a la pila de pendientes y empezara a ejecutar cada uno de los pendientes. Por eso recuerda si tienes mucha información en la pila principal estas tareas se van a demorar mucho en realizarse.
+    </p>
+    <p>En ejemplo siguiente se va a ver cuanto tiempo se demora en ejecutar una funcion en asincronismo</p>
+    <script>
+        console.log('a')
+        setTimeout(()=> console.log('b'),0)
+        console.log('c')
+        for(let i=0; i<10000000000; i++){
+
+        }
+        // En este ejemplo tenemos un for en la pila principal y asta que termine este for no podra continuar con la tarea segundaria que esta en setTimeout como podemos ver en su segundo parametro que es de el tiempo dice que aparesca en 0 segundos pero por el for esta tarea se demora en mi computadora en aserce en 90 segundos y despues de terminar ejecuta la setTimeout asi diga esta 0 segundos tiene que esperar asta que las tareas del js esten terminadas para ella ejecutarse  
+    </script>
+</body>
+</html>

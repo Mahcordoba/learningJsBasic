@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback part3 promesas</title>
+</head>
+<body>
+    <h2>Promesas</h2>
+    <p>
+        Con los callBacks teníamos un problema al anidarlos.
+        Para este problema existen las ‘promesas’.
+        <br>
+        Antes era necesario usar librerías externas pero ahora la mayoría de los browsers soportan las promesas. 
+        <br>
+        Si queremos verificar si las promesas son soportadas por el usuario se podría usar lo que se llama un ‘polifield’. Este detecta si el navegador donde está corriendo nuestro código no soporta las promesas, y si así es, crea las clases de las promesas por nosotros y así podrían ser utilizadas por nosotros de manera transparente para nuestro código.
+    </p>
+    <img src="../img/Promesas1.png" alt="promesa1">
+    <h2>¿Que son las promesas?</h2>
+    <p>
+        Tenemos que pensar las promesas como valores que aún no conocemos. Es la promesa de que ahí va a haber un valor cuando una acción asíncrona suceda y se devuelva.
+        <br>    
+        Las promesas tienen 3 estados y son como cualquier otro objeto de javascript.
+        <br>
+        El primero de los estados es ‘pending’. Es el estado cuando las creamos.
+        Si se resuelve exitosamente pasa al estado ‘fulfilled’.
+        <br>
+        Si ocurre algún error y no se resuelve pasa al estado de ‘rejected’.
+    </p>
+    <img src="../img/Promesas2.png" alt="promesa2">
+    <p>
+        Las promesas pueden no ser asíncronas también.
+        <br>
+        Para obtener el valor de la resolución de la promesa llamamos a la función _.then(val =>) _a la que le vamos a pasar como parámetro otra función en la que el primer parámetro será el valor que esperábamos.
+        <br>
+        Si sucede algún error agregamos el método .catch(err=>) al que se le asigna una función también como parámetro que va a recibir el error.
+        <br>
+        Las promesas se declaran de la siguiente manera:
+    </p>
+    <h2>New promesa</h2>
+    <img src="../img/Promesas3.png" alt="promesa3">
+    <p>
+        Se crea el nuevo objeto y se le asigna una función con dos parámetros ‘resolve’ y ‘reject’. Estas son dos funciones que debemos llamar si la promesa se resuelve o no.
+        <br>
+        Si se resuelve exitosamente llamamos a ‘.then(valor =>’ para obtener el valor del promise dentro del arrow function (valor=>).
+        Si sucede algún error podemos llamar al ‘.catch( err =>’ para obtener el tipo de error que sucedió y actuar en consecuencia.
+        <br>
+        Otra cosa más a cerca de las promesas es que luego de llegar al estado de 'fulfilled’ podemos retornar otra promesa dentro del .then y de esa manera ir encadenándolas en sucesivas acciones asíncronas. Cada una de ellas puede ser resuelta o rechazada en una nueva promesa que terminará en el estado de ‘fulfilled’.
+    </p>
+    <h2>En el script esta el ejemplo de codigo ya usado en anteriores clases</h2>
+    <p>Recuerda revizar la clase 16 y 17 si no entiendes de algo y como llegamos aquí</p>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./clase18.js">
+    </script>
+</body>
+</html>
