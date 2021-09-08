@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varios Recorsuvidad, Memorizacion , date</title>
+</head>
+<body>
+    <script>
+        //recursividad es una funcion que se llama a si misma pero esta necesita tener un final o si no se quedara infinimante ejecutando
+        function dividir(dividiendo, divisor)
+        {
+            if(dividiendo<divisor){
+                return 0
+            }
+            return 1 + dividir(diviendo-divisor, divisor )
+            // how funciona el algoritmo 
+            /*
+             13 /__4_____
+             
+             13 - 4 = 9   1
+             9 - 4 = 5    1
+             5 - 4 = 1    1
+             1 - 4 = -3   0
+
+             sumamos y nos 3 
+            */
+        }
+        // Memorización
+        // La idea es memorizar codigos que ya se hayan usado una ves para asi ahorrar computo ya que la idea es reutilizar codigo y esto es fundamental para las funciones recursivas ejemplo 
+        function factorial(n)
+        {
+            if(!this.cache)
+            {
+                this.cache = {}
+            }
+            if(this.cache[n])
+            {
+                return this.cache[n]
+            }
+            if (n === 1)
+            {
+                return 1
+            }
+            this.cache[n]= n * factorial(n-1)
+            return this.cache[n]
+        }
+        // new date es para fechas su contructor recibe 3 parametros que son dia, mes- 1 , año 
+        // si lo dejas sin parametros asume que te refieres al dia de hoy.
+        let fecha1 = new Date()
+        let fecha2 = new Date(15, 8, 1990)
+
+
+    </script>
+</body>
+</html>
