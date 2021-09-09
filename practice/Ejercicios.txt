@@ -1,0 +1,110 @@
+https://www.youtube.com/watch?v=PescFjv1UXM&ab_channel=VictorRoblesWEB 
+ejercicios sacados de la pagina de arriba
+
+1. Programa que pida dos números y que nos diga cual es el mayor, el menor y si son iguales
+2. Al programa anterior: Si los numeros no son un número o son menores o iguales a cero, volver a pedir los datos
+3. Utilizando un bucle, mostrar la suma y la media de los números introducidos hasta introducir un numero negativo y ahí mostrar el resultado
+4. hacer el mismo programa anterior pero usando arrays
+5. Hacer un programa que muestre todos los números entre dos números introducidos por el usuario; 
+6. Mostrar todos los números impares que hay entre dos números introducidos por el usuario.
+7. Programa que nos diga si un numero es par o impar. y en alert decir si el numero es par o impar,
+8. Tabla de multiplicar de un numero introducido por pantalla
+9. Calculadora: Pida dos números por pantalla, Si metemos uno mal que nos lo vuelva a pedir, Debe aparecer tanto el resultado en consola, como en alert, Y se deben usar funciones para este codigo
+Para los ejercicios siguientes usar un array ya predefinido
+10. Programa que pida 10 numeros y los guarde en un array 
+11. Con el array anterior, mostrar este en el cuerpo del html y en la consola 
+12. Ordenar el array anterior y mostrar en el cuerpo del html
+13. Invertir el orden del array anterior y mostrarlo
+14. Mostrar la cantidad de elementos del array anterior
+15. Pedir al usuario un numero y buscar si ese numero se encuentra en el array mostrar el resultado en el html
+
+16. Ejercicio con Dom y eventos 
+16.1 Crear un formulario con los siguientes campos: Nombre, Apellido y edad
+16.2 Botón de enviar el formulario
+16.3 En consola deve mostrarse los datos que introdujo el usuario
+16.4 Antes de enviar la información el navegador debe verificar si todos los datos del formulario estan rellenos
+
+17  Crea un formulario para guardar nombres de personas en el localstorage y muéstralos por pantalla en una lista de html
+18 En la lista anterior añade un botón para poder eliminar elementos del localstorage
+19 Haz una petición ajax a un api rest publica y muestra un listado de datos. 
+20 Muestra la fecha de hoy y un numero aleatorio del 1 al 120 en la consola del navegador. 
+
+21 Maqueta un web que se vea como la imagen ejercicio21 y donde estan las hojas haz un slider de imágenes funcional
+22 Con la maquetación anterior haz un cambiador de temas(cambiar colores y fondos de la web al hacer click en los botones flotantes laterales).
+23 Agregar un formulario que nos permita guardar en localstorage el nombre y los apellidos del usuario que este ne la web, hacer un inicio sesión y si el
+usuario existe mostrar en consola existe (Estos datos van a estar guardados en locastorage)
+24 En la sección sobre mi en la que habrá un acordeón investigar mas al respecto
+25 Sección Reloj crear un reloj que muestre la hora y la fecha. 
+26 Sección de contacto con formulario y validación 
+
+ejercicios sacados de : https://lemus.webs.upv.es/wordpress/wp-content/uploads/2018/07/javascript-es6-ejercicios-resueltos-parte-1.pdf
+
+27 encuentra el error en el siguiente codigo  
+ 
+<!DOCTYPE html> 
+<html><body> 
+<script type="text/javascript"> 
+    let a, b; 
+    a = 2; b = 8; 
+    resultado = a * b; 
+   
+    document.write(`Variable a contiene ${a} <br> ` ); 
+    document.write(`Variable b contiene ${b} <br> ` ); 
+    document.write(`El producto de a por b es ${result} `); 
+ 
+</script> 
+ 
+<p>Los puntos de interrupcion son fundamentales para programar</p> 
+ 
+</body> 
+</html>
+
+28 Realizar programa donde el usuario introduce 2 números y el ordenador responde 
+sacando por pantalla la resta de ambos números.
+
+29 Realizar programa donde el usuario introduce 2 números y el ordenador responde 
+sacando por pantalla la resta de ambos números y también su multiplicación.
+
+30 Crear programa  que lee  tres notas de un alumno, calcula la media e indica si está 
+suspendido o aprobado (nota media mayor o igual a 5) 
+
+31   Realizar un programa para una tienda de coches: Si el coche a la venta es un ford 
+fiesta, el descuento es de un 5%. Si el coche a la venta es un ford focus, el descuento es del 10%. El usuario 
+introduce el artículo (o su código) y el programa saca el descuento correspondiente por pantalla.
+
+32   Realizar programa con la introducción de la edad por parte del 
+usuario. NO PERMITIR EDADES MENORES QUE 1 AÑO NI MAYORES QUE 120 años. La computadora indica 
+que: "Sí tiene permiso de acceso" si la edad es mayor que 18 años. 
+
+33  Realizar ALGORITMO ESTRUCTURADO  para una agencia de viajes.  
+Si el usuario introduce como origen la ciudad de Palma y como destino Barcelona, el descuento se establece 
+en el 5%. Con el mismo origen, si el destino es Madrid el descuento es del 10% y si el destino es Valencia , el 
+descuento es del 15%.
+
+34   Realizar programa en el que el usuario introduce el número del mes 
+ (1 al 12) y el código responde si ese mes tiene 30 o 31 dias. (Ojo que el usuario solo pueda enviar numeros del 1 al 12 de lo contrario volver a pedir los datos)
+
+
+mas ejercicios basicos http://multimedia.uoc.edu/blogs/pw/es/2013/09/17/exercicis-de-javascript-iniciacio/
+
+
+  35 Escribe un programa de una sola línea que haga que aparezca en la pantalla un alert que diga “Hello World”.
+  36  Escribe un programa de una sola línea que escriba en la pantalla un texto que diga “Hello World” (document.write).
+  37 Escribe un programa de una sola línea que escriba en la pantalla el resultado de sumar 3 + 5.
+  38 Escribe un programa de dos líneas que pida el nombre del usuario con un prompt y escriba un texto que diga “Hola nombreUsuario”
+  39 Escribe un programa de tres líneas que pida un número, pida otro número y escriba el resultado de sumar estos dos números.
+  40 Escribe un programa que pida dos números y escriba en la pantalla cual es el mayor.
+  41 Escribe un programa que pida 3 números y escriba en la pantalla el mayor de los tres.
+  42 Escribe un programa que pida un número y diga si es divisible por 2
+  43 Escribe un programa que pida una frase y escriba cuantas veces aparece la letra a
+  44 Escribe un programa que pida una frase y escriba las vocales que aparecen
+  45 Escribe un programa que pida una frase y escriba cuántas de las letras que tiene son vocales
+  46 Escribe un programa que pida una frase y escriba cuántas veces aparecen cada una de las vocales
+  47 Escribe un programa que pida un número y nos diga si es divisible por 2, 3, 5 o 7 (sólo hay que comprobar si lo es por uno de los cuatro)
+  48 Añadir al ejercicio anterior que nos diga por cual de los cuatro es divisible (hay que decir todos por los que es divisible)
+  49 Escribir un programa que escriba en pantalla los divisores de un número dado
+  50 Escribir un programa que escriba en pantalla los divisores comunes de dos números dados
+  51 Escribir un programa que nos diga si un número dado es primo (no es divisible por ninguno otro número que no sea él mismo o la unidad)
+
+
+Antes de hacer esto reestructurar los ejercios 👍🏼
