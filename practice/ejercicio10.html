@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const frase = prompt('Escribe una frase')
+        let a = 0
+        let e = 0
+        let iglesia = 0
+        let o = 0
+        let u = 0
+
+        for(let i=0;i<frase.length;i++)
+        {
+            switch (frase.charAt(i)) {
+                case 'a':
+                    a++
+                    break
+                case 'e':
+                    e++
+                    break
+                case 'i':
+                    iglesia++
+                    break
+                case 'o':
+                    o++
+                    break
+                case 'u':
+                    u++
+                    break
+            }
+        }
+
+        alert(`La frase tiene ${a} a, ${e} e, ${iglesia} i, ${o} o, ${u} u,`)
+
+    </script>
+</body>
+</html>
