@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const listaNumeros = []
+        let numero
+        let bucle= true
+        do {
+            numero = Number(prompt('Ingrese un numero para terminar el bucle escribe un numero negativo'))
+            if(numero<0)
+            {
+                bucle= false
+            }
+            listaNumeros.push(numero)
+        } while (bucle);
+        document.write(`La suma de los numeros es ${listaNumeros.reduce(function (a,b){return a + b})} siquieres ver los numeros que ingresaste miralos en la consola`)
+        console.table(listaNumeros)
+    </script>
+</body>
+</html>

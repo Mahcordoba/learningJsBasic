@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let bucle = true
+        let numero = 0
+        let numeroResivido
+        do {
+            numeroResivido = Number(prompt('Ingrese un numero recuerde para acabar ingrese un numero negativo'))
+            if(numeroResivido< 0)
+            {
+                bucle = false
+            }
+            numero += numeroResivido
+        } while (bucle);
+        document.write(`El resultado de la suma de los numeros que ingresaste es: ${numero} `)
+    </script>
+</body>
+</html>
