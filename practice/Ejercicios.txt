@@ -19,14 +19,15 @@
 19. Programa que nos diga si un numero es par o impar. y en alert decir si el numero es par o impar,
 20. Tabla de multiplicar de un numero introducido por pantalla
 
-Para los ejercicios siguientes usar un array ya predefinido
 21. Programa que pida 10 numeros y los guarde en un array 
+Para los ejercicios siguientes usar un array ya predefinido
 22. Con el array anterior, mostrar este en el cuerpo del html y en la consola 
 23. Ordenar el array anterior y mostrar en el cuerpo del html
 24. Invertir el orden del array anterior y mostrarlo
 25. Mostrar la cantidad de elementos del array anterior
 26. Pedir al usuario un numero y buscar si ese numero se encuentra en el array mostrar el resultado en el html
 27. Haz una petición ajax a un api rest publica y muestra un listado de datos.
+// Toca hacer el ejercicio 27 
 28. Crea un formulario para guardar nombres de personas en el localstorage y muéstralos por pantalla en una lista de html
 29. En la lista anterior añade un botón para poder eliminar elementos del localstorage
 30. Muestra la fecha de hoy y un numero aleatorio del 1 al 120 en la consola del navegador. 

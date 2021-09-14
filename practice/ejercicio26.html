@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const listaNumerica = [15,120,3532,1234,10,142,0,8,1999,1029021]
+        const numeroUser = Number(prompt('Escribe un numero y lo vamos a buscar si esta en mi array'))
+        let bucle = true
+        let i = 0
+        do {
+            if(listaNumerica[i]===numeroUser)
+            {
+                document.write(`El numero ${numeroUser} si esta en mi array`)
+                bucle = false
+            }
+            i++
+            if(i >= listaNumerica.length)
+            {
+                document.write("El numero que ingresaste no esta en mi array")
+                bucle= false
+            }
+        } while (bucle);
+    </script>
+</body>
+</html>
