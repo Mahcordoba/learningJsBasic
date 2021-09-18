@@ -10,7 +10,38 @@
     <script>
         let numero = 600
         let cache = 0
-        const LISTA = []
+        let LISTA = []
+        
+        function contar(index, lista)
+        {
+            let count= 0
+            for(let i=0; i<lista.length; i++)
+            {
+                if(index === lista[i])
+                {
+                    count++
+                }
+                if(index != lista[i])
+                {
+                    return count
+                }
+            }
+            return count
+        }
+        function eliminarPosicion(index, lista)
+        {
+            let i = 0
+            do {
+                if(index === lista[i])
+                {
+                    lista.shift()
+                }else
+                {
+                    i = 10
+                }
+            } while (i === 0);
+            return lista
+        }
         do {
             if(numero%2 === 0)
             {
@@ -36,6 +67,19 @@
             }
         } while (numero != 1);
         console.log(LISTA)
+        let objectico = {}
+        let indexito = 0
+        let count = 0
+        let bucle = true
+        do {
+            objectico[LISTA[indexito]]=contar(LISTA[indexito],LISTA) 
+            LISTA = eliminarPosicion(LISTA[indexito],LISTA)
+            if(indexito>=LISTA.length)
+            {
+                bucle = false
+            }
+        } while (bucle);
+        console.log(objectico)
     </script>
 </body>
 </html>
