@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function divisor(numero)
+        {
+            let texto = 'El numero es divisible en '
+            let cierto = false
+            if(numero%2 === 0)
+            {
+                texto += '2,'
+                cierto = true
+            }
+            if(numero%3 === 0)
+            {
+                texto += '3,'
+                cierto = true
+            }
+            if(numero%5 === 0)
+            {
+                texto += '5,'
+                cierto = true
+            }
+            if(numero%7 === 0 )
+            {
+                texto += '7,'
+                cierto = true
+            }
+            if(cierto=== false)
+            {
+                return 'El numero no se puede dividir entre 2,3,5,7'
+            }
+            return texto
+        }
+        const NUMERO = Number(prompt('Escribe un numero'))
+        document.write(divisor(NUMERO))
+    </script>
+</body>
+</html>

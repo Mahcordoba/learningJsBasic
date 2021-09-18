@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function comprobarEdad(tuEdad)
+        {
+            if(tuEdad>1 && tuEdad<120)
+            {
+                
+                return tuEdad
+            }else
+            {
+                return comprobarEdad(Number(prompt('Disculpa la edad que introduciste es invalida ingresela nueva mente')))
+            }
+        }
+        const edad = comprobarEdad(Number(prompt('Por favor ingrese su edad para el ingreso')))
+        
+        if( edad >= 18)
+        {
+            document.write('Acceso conseguido')
+        }else
+        {
+            document.write('Acceso denegado')
+        }
+    </script>
+</body>
+</html>

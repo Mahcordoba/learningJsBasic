@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numero = Number(prompt('Escribe un numero'))
+
+        function esPrimo(num)
+        {
+            texto = 'El numero es primo'
+            if(num === 2)
+            {
+                return texto
+            }
+            if (num === 3)
+            {
+                return texto
+            }
+            if(num%num === 0 && num%2!=0 && num%3 != 0)
+            {
+                return texto
+            }else
+            {
+                return 'No es primo'
+            }
+        }
+        document.write(esPrimo(numero))
+    </script>
+</body>
+</html>

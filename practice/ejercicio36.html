@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function esUnMes(mes)
+        {
+            if(mes <= 12 && mes >=1)
+            {
+                return mes
+            }
+            else
+            {
+                return esUnMes(Number(prompt('Tuvimos un problema y el numero que ingresate no corresponde a un mes por favor escribe un numero del 1 al 12')))
+            }
+        }
+        function diasMes(mes)
+        {
+            switch (mes) {
+                case 1:
+                    return 31
+                    break;
+                case 2: 
+                    return 28
+                case 3: 
+                    return 31
+                case 4: 
+                    return 30
+                case 5: 
+                    return 31 
+                case 6: 
+                    return 30
+                case 7: 
+                    return 30 
+                case 8: 
+                    return 31 
+                case 9: 
+                    return 30 
+                case 10: 
+                    return 31 
+                case 11: 
+                    return 30
+                case 12: 
+                    return 31
+            }
+        }
+        const MES= esUnMes(Number(prompt('Escribe el numero del mes del que quieres saber cuantos dias tiene ')))
+        const MesDias= diasMes(MES)
+        document.write(`El mes ${MES} tiene ${MesDias}`) 
+    </script>
+</body>
+</html>

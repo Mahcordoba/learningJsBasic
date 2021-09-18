@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numero = 600
+        let cache = 0
+        const LISTA = []
+        do {
+            if(numero%2 === 0)
+            {
+                numero = numero / 2
+                LISTA.push(2)
+            }else if(numero%3 === 0)
+            {
+                numero = numero / 3
+                LISTA.push(3)
+            }else if(numero%5 === 0)
+            {
+                numero = numero / 5
+                LISTA.push(5)
+            }else if(numero%7 === 0)
+            {
+                numero = numero / 7
+                LISTA.push(7)
+            }else if(numero%numero === 0)
+            {
+                cache = numero
+                numero = numero / numero
+                LISTA.push(cache)
+            }
+        } while (numero != 1);
+        console.log(LISTA)
+    </script>
+</body>
+</html>
