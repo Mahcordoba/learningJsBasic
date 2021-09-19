@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Funciones helpert
+        function howDisores(objectico)
+        {
+            let divisores = 1
+            for(llave in objectico)
+            {
+                divisores = divisores * (objectico[llave]+1)
+            }
+            return divisores
+        }
+        //Funciones de logica
+        function contar(index, lista)
+        {
+            let count= 0
+            for(let i=0; i<lista.length; i++)
+            {
+                if(index === lista[i])
+                {
+                    count++
+                }
+                if(index != lista[i])
+                {
+                    return count
+                }
+            }
+            return count
+        }
+        function eliminarPosicion(index, lista)
+        {
+            let i = 0
+            do {
+                if(index === lista[i])
+                {
+                    lista.shift()
+                }else
+                {
+                    i = 10
+                }
+            } while (i === 0);
+            return lista
+        }
+        function minimoFactor(numero)
+        {
+            const listica = []
+            do 
+            {
+                if(numero%2 === 0)
+                {
+                    numero = numero / 2
+                    listica.push(2)
+                }else if(numero%3 === 0)
+                {
+                    numero = numero / 3
+                    listica.push(3)
+                }else if(numero%5 === 0)
+                {
+                    numero = numero / 5
+                    listica.push(5)
+                }else if(numero%7 === 0)
+                {
+                    numero = numero / 7
+                    listica.push(7)
+                }else if(numero%numero === 0)
+                {
+                    let cache = numero
+                    numero = numero / numero
+                    listica.push(cache)
+                }
+            } while (numero != 1);
+            return listica
+        }
+        function crearObjecto(LISTA)
+        {
+            let objectico = {}
+            let indexito = 0
+            let count = 0
+            let bucle = true
+            do {
+                objectico[LISTA[indexito]]=contar(LISTA[indexito],LISTA) 
+                LISTA = eliminarPosicion(LISTA[indexito],LISTA)
+                if(indexito>=LISTA.length)
+                {
+                    bucle = false
+                }
+            } while (bucle);
+            return objectico
+        }
+        function numeroBig(objecto)
+        {
+            const listanueva=[]
+            let numeroMoreBig = 0
+            let numeroStar = 0
+            for(llave in objecto)
+            {
+                listanueva.push(llave)
+            }
+            numeroMoreBig = objecto[listanueva[0]]
+            numeroStar = listanueva[0]
+
+            for(let i= 0; i<listanueva.length;i++)
+            {
+                if(objecto[listanueva[i]]>numeroMoreBig)
+                {
+                    numeroStar= listanueva[i]
+                    numeroMoreBig = objecto[listanueva[i]]
+                }
+            }
+            return {
+                numero: numeroStar,
+                repeat: numeroMoreBig
+            }
+        }
+        function listaDivisores(objecto1, objectoPrincipal)
+        {
+            let listos = []
+            let dividir = []
+            for(let i=0; i<= objecto1.repeat; i++)
+            {
+                dividir.push((Number(objecto1.numero)**i))
+            }
+            listos.push(Number(objecto1.numero))
+            for(llave in objectoPrincipal)
+            {
+                if(!thisArreglo(llave,listos))
+                {
+                    let arregloNew = pruebaArreglo(dividir,Number(llave),objectoPrincipal[llave])
+                    dividir = convinarArreglos(dividir,arregloNew)
+                }
+            }
+            dividir.sort((a,b)=> a - b)
+            return dividir
+        }
+        function thisArreglo(llave,lista)
+        {
+            for(let i = 0; i<lista.length;i++)
+            {
+                if(lista[i]==llave)
+                {
+                    return true
+                }
+            }
+            return false
+        }
+        function pruebaArreglo(arregloPrincipal, llave, repeat)
+        {
+            let multiplicador
+            let listica = []
+            let numero = 1
+            do {
+                for(let i=0; i<arregloPrincipal.length;i++)
+                {
+                    multiplicador= arregloPrincipal[i]*(llave**numero)
+                    listica.push(multiplicador) 
+                }
+                numero++   
+            } while (numero<=repeat);
+            return listica
+        }
+        function convinarArreglos(arregloPrincipal, arregloSegundario)
+        {
+            for(let i=0; i<arregloSegundario.length; i++)
+            {
+                arregloPrincipal.push(arregloSegundario[i])
+            }
+            return arregloPrincipal
+        }
+        function similares(lista1, lista2)
+        {
+            let lista
+            let pequenio
+            let identico=[]
+            let j
+            if(lista1.length === lista2.length || lista1.length > lista2.length)
+            {
+                lista=lista1
+                pequenio=lista2
+            }else
+            {
+                lista=lista2
+                pequenio=lista1
+            }
+            for(let i=0; i< lista.length; i++)
+            {
+                j=0
+                do {
+                    if(lista[i]===pequenio[j])
+                    {
+                        identico.push(pequenio[j])
+                        j = pequenio.length + 1
+                    }
+                    j++
+                } while (j<pequenio.length);
+            }
+            return identico
+        }
+        //Variables
+        
+        const numberUser = Number(prompt('Ingrese el primer numero para comparar sus divisores'))
+        const numberUser2 = Number(prompt('Ingrese el segundo numero para comparar sus divisores'))
+        let numero = numberUser
+        let numero2 = numberUser2
+        let lista = minimoFactor(numero)
+        let lista2 = minimoFactor(numero2)
+        let objecto_1 = crearObjecto(lista)
+        let objecto_2 = crearObjecto(lista2)
+        let divisor_1 = howDisores(objecto_1)
+        let divisor_2 = howDisores(objecto_2)
+        let bigNumero_1 = numeroBig(objecto_1)
+        let bigNumero_2 = numeroBig(objecto_2)
+        let sonDivisibles = listaDivisores(bigNumero_1, objecto_1)
+        let sonDivisibles_2 = listaDivisores(bigNumero_2, objecto_2) 
+        let identicos = similares(sonDivisibles, sonDivisibles_2)
+
+        document.write(`El numero ${numberUser} tiene ${divisor_1} <br> El otro numero es ${numberUser2} tiene ${divisor_2}
+        <br> y sus divisores comunes son: 
+        <br> ${identicos}`)
+    </script>
+</body>
+</html>
