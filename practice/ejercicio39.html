@@ -8,7 +8,8 @@
 </head>
 <body>
     <script>
-        let numero = 600
+        const numberUser = Number(prompt('Ingrese el numero que quiere dividir'))
+        let numero = numberUser
         let cache = 0
         let LISTA = []
         
@@ -66,7 +67,6 @@
                 LISTA.push(cache)
             }
         } while (numero != 1);
-        console.log(LISTA)
         let objectico = {}
         let indexito = 0
         let count = 0
@@ -79,7 +79,98 @@
                 bucle = false
             }
         } while (bucle);
-        console.log(objectico)
-    </script>
+
+        // Divisores que puede tener el numero
+        let divisores = 1
+        for(llave in objectico)
+        {
+            divisores = divisores * (objectico[llave]+1)
+        }
+        // Cuales son esos divisores
+        function numeroBig(objecto)
+        {
+            const listanueva=[]
+            let numeroMoreBig = 0
+            let numeroStar = 0
+            for(llave in objecto)
+            {
+                listanueva.push(llave)
+            }
+            numeroMoreBig = objecto[listanueva[0]]
+            numeroStar = listanueva[0]
+
+            for(let i= 0; i<listanueva.length;i++)
+            {
+                if(objecto[listanueva[i]]>numeroMoreBig)
+                {
+                    numeroStar= listanueva[i]
+                    numeroMoreBig = objecto[listanueva[i]]
+                }
+            }
+            return {
+                numero: numeroStar,
+                repeat: numeroMoreBig
+            }
+        }
+        let pruebitass = numeroBig(objectico)
+        function listaDivisores(objecto1, objectoPrincipal)
+        {
+            let listos = []
+            let dividir = []
+            for(let i=0; i<= objecto1.repeat; i++)
+            {
+                dividir.push((Number(objecto1.numero)**i))
+            }
+            listos.push(Number(objecto1.numero))
+            for(llave in objectoPrincipal)
+            {
+                if(!thisArreglo(llave,listos))
+                {
+                    let arregloNew = pruebaArreglo(dividir,Number(llave),objectoPrincipal[llave])
+                    dividir = convinarArreglos(dividir,arregloNew)
+                }
+            }
+            dividir.sort((a,b)=> a - b)
+            return dividir
+        }
+        function thisArreglo(llave,lista)
+        {
+            for(let i = 0; i<lista.length;i++)
+            {
+                if(lista[i]==llave)
+                {
+                    return true
+                }
+            }
+            return false
+        }
+        function pruebaArreglo(arregloPrincipal, llave, repeat)
+        {
+            let multiplicador
+            let listica = []
+            let numero = 1
+            do {
+                for(let i=0; i<arregloPrincipal.length;i++)
+                {
+                    multiplicador= arregloPrincipal[i]*(llave**numero)
+                    listica.push(multiplicador) 
+                }
+                numero++   
+            } while (numero<=repeat);
+            return listica
+        }
+        function convinarArreglos(arregloPrincipal, arregloSegundario)
+        {
+            for(let i=0; i<arregloSegundario.length; i++)
+            {
+                arregloPrincipal.push(arregloSegundario[i])
+            }
+            return arregloPrincipal
+        }
+
+        let sonDivisibles = listaDivisores(pruebitass, objectico)
+        
+        document.write(`El numero ${numberUser} tiene ${divisores} divisores y estos son: <br> ${sonDivisibles}`)
+        </script>
 </body>
 </html>
