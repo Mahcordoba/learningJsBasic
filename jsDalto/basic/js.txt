@@ -1,0 +1,17 @@
+Formas de enlazar un javascript 
+    -En linea 
+    Este es cuando implementas onclick dentro de una etiqueta ejemplo <h1 onclick="alert()"> </h1>
+    -Dentro de la etiqueta <script>
+    -En un archivo con extencion js
+    -Con un Requiere
+
+Operadores Asignación
+    Asignacion: asigna el valor de la izquierda a la llave que seria el valor de la derecha.
+    Example variable = 10 
+    Operadores: 
+        - **= Exponencial 
+        - <<= Desplazamiento a la izquierda
+        - >>= Desplazamiento a la derecha
+        - &= Asignacion and
+        - |= Asignacion ord
+Backtikcs ` ${}` dentro de las ` tambien se puede escribir codigo html para tenerlo en cuenta.     
