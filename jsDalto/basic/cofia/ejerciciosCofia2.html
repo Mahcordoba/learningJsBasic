@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cofia-2</title>
+</head>
+<body>
+    <script>
+        //Primer ejercicio
+        let firtsPerson = 0
+        const Edad = edad => {
+            if(edad >= 18)
+            {
+                document.write('Puedes pasar')
+            }else 
+            {
+                document.write('Ho un niño no puedes pasar')
+            }
+        }
+        const free = hora => {
+            if(hora === 2 && firtsPerson === 0)
+            {
+                document.write('<br> Entras gratis Felicidades')
+                firtsPerson++
+            }
+        }
+        //Segundo Ejercicio 
+        // Para poder mirarlo quitar comentarios
+        /*let alugnos = []
+        function inscribirAlugno(nombres)
+        {
+            alugnos[nombres]=[]
+        }
+        
+        const asiste = Estas => {
+            switch (Estas) {
+                    case 0:
+                        return false
+                    case 1:
+                        return true
+                    default:
+                        return false
+                    }
+        }
+        
+        const fallas = (nombre, estudiante) => 
+        {
+            inasistencia = 0
+            for(let i =0;i <estudiante.length; i++){
+                if(estudiante[i]===false)
+                {
+                    inasistencia++
+                    if(inasistencia===3)
+                    {
+                        document.write(`${nombre} perdiste el semestre por no venir a clase`)
+                    }
+                }
+            }
+        } 
+        inscribirAlugno('Pepito')
+        inscribirAlugno('Federico')
+        let dia = 27
+        do {
+            suerte = 0
+            for(asistencia in alugnos)
+            {
+                alugnos[asistencia].push(asiste(Number(prompt(`Esta ${asistencia} `))))
+            }
+            dia++
+        } while (dia<31);
+        for(verificar in alugnos)
+        {
+            fallas(verificar,alugnos[verificar])
+        }*/
+        //Tercer ejercicio 
+        const suma = (num1,num2)=> num1 + num2
+        const resta = (num1,num2)=> num1 - num2
+        const multiplicacion = (num1,num2)=> num1 * num2
+        const divicion= (num1,num2)=> {
+            if(num2 === 0)
+            {
+                return 0
+            }
+            return num1 / num2 
+        } 
+    </script>
+</body>
+</html>

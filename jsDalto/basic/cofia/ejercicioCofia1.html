@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cofia</title>
+</head>
+<body>
+    <!-- Ejercicios para mañana https://youtu.be/z95mZVUcJ-E?list=PLE8uP447fYpgOwKgbypiCGSz7veY2MLGb&t=6451-->
+    <h1>Estas practicas fuerón sacadas del curso de dalto</h1>
+    <script>
+        //Esta es mi solución
+        // Personas de ejemplo 
+        roberto = 1.5
+        pedro = 1.7
+        cofia = 3 
+        //Precios de helados 
+        helados = []
+        helados['palitoAgua']= 0.6
+        helados['palitoCrema']= 1
+        helados['heladix']= 1.6
+        helados['heladovich']=1.7
+        helados['helardo']=1.8
+        helados['pontecitoConfies']=2.9
+        helados['ponte1/4Kg']=2.9
+        // Funciones
+        const Heladitos = dinero =>{
+            heladoCompra=[]
+            big = 0
+            for(clave in helados)
+            {
+                if(dinero >= helados[clave])
+                {
+                    heladoCompra[clave]=helados[clave]
+                }
+            }
+            for(clave2 in heladoCompra)
+            {
+                if(big < heladoCompra[clave2])
+                {
+                    big = heladoCompra[clave2]
+                }
+            }
+            for(clave in heladoCompra)
+            {
+                console.log(big)
+                if(big === heladoCompra[clave]){
+                    document.write(`Ese dinero te alcanza para comprar ${clave} = ${heladoCompra[clave]} <br>`)
+                }
+            }
+        }
+        function vueltos(valor, valorHelado){
+            resultado = valor - valorHelado
+            console.log(resultado)
+            document.write(`Tus vueltas serian ${resultado}`)
+        }
+        //Solucion de dalto
+        const definirCompra = n =>{
+            let din = prompt(`´Dinero de ${n}`)
+            if(din>= 0.6 && din <1) return (`${n}: helado de agua`)
+            if(din>= 1 && din <1.6) return (`${n}: helado de crema`)
+            if(din>= 1.6 && din <1.7) return (`${n}: helado de heladix`)
+            if(din>= 1.7 && din <1.8) return (`${n}: helado de heladovich`)
+            if(din>= 1.8 && din <2.9) return (`${n}: helado de helardo`)
+            if(din >= 2.9)return(`${n} helado de confites o pote de 1.4kg`)
+            else return(`${n}: No te alcanza para ningún icecream`)
+        }
+        //Ejercicio 2
+        //Quitar comentarios de indigente y venderboletos
+        let boleto = 1
+        //let indigente = Number(prompt('Bienvenido cuanto dinero tienes'))
+        const knowBoletos = dinero => Math.floor(boleto * dinero)
+        const venderBoletos = dinero => {
+            venta = knowBoletos(dinero)
+            if(venta===1)
+            {
+                document.write(`Compraste un boleto y estos son tus vueltos ${(dinero-venta)}`)
+            }else if(venta<1)
+            {
+                document.write('No te alcanza para nigún boleto vete de aquí')
+            }else if(venta===3)
+            {
+                document.write(`Compraste ${venta} boletos y estos es lo que acabas de donar $${(dinero-venta)} `)
+            }else
+            {
+                document.write(`Compraste ${venta} boletos y estos son tus vueltos $${(dinero-venta)}`)
+            }
+        }
+        //venderBoletos(indigente)
+        //Ejercicio 3
+        let preguntas = []
+        for(let i=0; i<10; i++)
+        {
+            preguntas.push(Math.round(2*Math.random()))
+        }
+        const detectorMentiras= pregunta => {
+            if(pregunta===0){return `Estas mintiendo resibes una gran descarga electrica 🌩`}
+            if(pregunta===1){return 'Esta diciendo la verdad'}
+            if(pregunta===2){return 'Por favor hacer una pregunta mas concreta'}
+        }
+        for(let i=0; i<preguntas.length;i++)
+        {
+            document.write(`<br> ${detectorMentiras(preguntas[i])}`)
+        }
+    </script>
+</body>
+</html>
