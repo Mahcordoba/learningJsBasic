@@ -26,10 +26,16 @@ sentencia continue permite que continue el bucle sin ejecutar mas codigo.
 Cuando estes instaciando objectos lo mejor es ponerlos en una variable const. 
 
 
-//::::Estudiar mas sobre atributos globales de html::::::::::://
+//---------Estudiar mas sobre atributos globales de html----------//
 
 contenteditable = puede tener dos valores true permite editar la etiqueta en el navegador y si es false no se permite editar 
 
 este lo puedes agregar en html o en js con el metodo setAttribute("contenteditable","true or false")
 
-//::::
+//::::Codigos obsolectos :::::::::://
+
+https://developer.mozilla.org/es/ para saber si algo sigue funcionando se puede revisar esta pagina y metodo que se va a usar  
+tambien hay que estar pendiente de las actualizaciones de js, html y css para mirar que entra nuevo y que queda absolecto. 
+https://www.w3schools.com/ esta tambien sirbe para verificar 
+
+//-----------Estudia mas sobre los callbacks y promesas async y await--------

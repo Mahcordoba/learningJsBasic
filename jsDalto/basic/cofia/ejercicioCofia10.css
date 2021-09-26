@@ -1,0 +1,61 @@
+*
+{
+    box-sizing: border-box;
+}
+.datos
+{
+    width: 80%;
+    margin: auto;
+    background-color: black;
+    padding: 15px;
+}
+.datos-alugno
+{
+    width: 350px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 2px 2px 10px 0px white,
+                -2px -2px 10px 0px white;
+}
+.datos-alugno input
+{
+    margin: 10px 0;
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+    background-color: black;
+    border: none;
+    border-bottom: 5px solid lightgray;
+    box-shadow: none;
+    color: aqua;
+}
+.datos-alugno label
+{
+    color: white;
+}
+.datos-alugno input::placeholder
+{
+    color: white;
+}
+.datos-alugno .boton
+{
+    border: 2px solid white;
+}
+.datos-alugno .boton:hover
+{
+    background-color: aqua;
+    color: black;
+}
+.resultado
+{
+    width: 90%;
+    padding: 30px;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+}
