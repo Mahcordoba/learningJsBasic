@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback-1</title>
+</head>
+<body>
+    <script>
+        // Los callbacks son una función que se llama en una función se suelen usar con el setTimeout() que a su ves funciona como un callback
+        // Ejemplo-1 
+        function callback()
+        {
+            console.log('Mensaje del callback')
+        }
+        function llamado(fn)// Para el nombre de una variable que resibe una función suelen escribir callback, cb o fn 
+        {
+            fn()
+        }
+        llamado(callback)
+        //Ejemplo-2
+        function callback2(saludo)
+        {
+            console.log(saludo)
+        }
+        function funcion2(cb)
+        {
+            setTimeout(function(){
+                let saludo = 'Hello word'
+                cb(saludo)
+            },1000)
+        }
+        funcion2(callback2)
+    </script>
+</body>
+</html>

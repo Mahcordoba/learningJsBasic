@@ -38,4 +38,8 @@ https://developer.mozilla.org/es/ para saber si algo sigue funcionando se puede 
 tambien hay que estar pendiente de las actualizaciones de js, html y css para mirar que entra nuevo y que queda absolecto. 
 https://www.w3schools.com/ esta tambien sirbe para verificar 
 
-//-----------Estudia mas sobre los callbacks y promesas async y await--------
+//-----------Estudia mas sobre los callbacks y promesas async y await import esto antes del ajax--------//
+
+//-------AJAX estudiar mas ----------
+//------fetch estudiar mas ----------
+//-------axios estudiar mas ---------

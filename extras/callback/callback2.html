@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Callback tambien se podria conocer como una función de orden superior -->
+    <script>
+        //Ejemplo1
+        let zfighters = ['Goku', 'Vegeta','Gohan', 'Picolo']
+        zfighters.forEach((name,index)=>{
+            console.log(index+1 + '. ' + name)
+        })
+        // Esto seria un ejemplo de una función callback y es un bucle forEach de los arreglos 
+        // Vea mos como funciona
+        /*La funcion forEach llama a la funcion anonima y esta pide como parametros name y un index 
+        entonces se ejecuta el loops y ingresa el valor de la primera posición al name y el iterador en el indexe asi sucesibamente asta acabar con el bucle*/
+        // :::::::Ejemplo-2 como funciones nombradas ::::::::
+        let allUsers = []
+        // función de logueo genérica
+        function logStuff(data)
+        {
+            if('string' == typeof data) return console.log(data)
+            if('object' == typeof data){
+                for(var key in data){
+                    console.log(key + ': ' + data[key])
+                }
+            }
+        }
+        // Funcion que recibe dos parametros; el segundo es una función 
+        function getInput(input, callback)
+        {
+            allUsers.push(input)
+            // Como buena practica se usa esto para identificar que es una función
+            if('function' == typeof callback) callback(input)
+            else console.log(callback)
+        }
+        // Llamamos a la función get input 
+        getInput({user: 'fulanito', speciality: 'De tal'}, logStuff)
+        getInput({user: 'fulanito', speciality: 'De tal'}, {tomando:'el pelo'})
+    </script>
+</body>
+</html>
